@@ -17,7 +17,7 @@ public class Fysikbib {
 	 */
 	public static double fahrenheitToCelsius(double fahrenheit) {
 		double celsius = (fahrenheit - 32)*5/9;
-
+		int hej = 0;
 		return celsius;
 	}	
 	
