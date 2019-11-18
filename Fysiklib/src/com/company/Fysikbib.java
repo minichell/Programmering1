@@ -6,7 +6,7 @@ public class Fysikbib {
 		// TODO Auto-generated method stub
 	System.out.println(fahrenheitToCelsius(50));
 	System.out.println(kelvinToCelsius(0));
-	
+	System.out.println(fluidPressure(FluidTable.WATER, 10));
 
 	}
 	
@@ -29,5 +29,18 @@ public class Fysikbib {
 		double celsius = kelvin - 273.15;
 		return celsius;
 	}
+
+	/**
+	 * En metod som räknar ut vätsketrycket i en vätska vid ett visst djup.
+	 * @param fluid - En variabel som är densitetet
+	 * @param deep - En variabel som är höjden
+	 * @return - thePressure
+	 */
+    public static double fluidPressure(FluidTable fluid, double deep){
+	    double thePressure = 0;
+	    thePressure = fluid.density*9.82*deep;
+		return thePressure;
+
+    }
 
 }
