@@ -10,6 +10,7 @@ public class Fysikbib<thePressure> {
 		System.out.println(kelvinToCelsius(0));
 		System.out.println(fluidPressure(FluidTable.WATER, 10));
 		System.out.println(pressureUnderWater(10));
+		System.out.println(kineticEnergi(2,2));
 
 	}
 
@@ -58,4 +59,16 @@ public class Fysikbib<thePressure> {
 		double thePressure = H20.density*9.82*deep;
 		return thePressure;
 }
+
+	/**
+	 * En metod som räknar ut kinetisk energi med hjälp av massa och hastighet
+	 * @param mass - En variabel som är vikten/massa
+	 * @param velocity - En variabel som är hastigheten
+	 * @return - KineticEnergi
+	 *
+	 */
+	public static double kineticEnergi(double mass, double velocity){
+		double kineticEnergi = 0.5*mass*velocity*velocity;
+		return kineticEnergi;
+	}
 }
