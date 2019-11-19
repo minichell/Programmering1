@@ -11,6 +11,7 @@ public class Fysikbib<thePressure> {
 		System.out.println(fluidPressure(FluidTable.WATER, 10));
 		System.out.println(pressureUnderWater(10));
 		System.out.println(kineticEnergi(2,2));
+        System.out.println(potentialEnergy(2,5));
 
 	}
 
@@ -71,4 +72,26 @@ public class Fysikbib<thePressure> {
 		double kineticEnergi = 0.5*mass*velocity*velocity;
 		return kineticEnergi;
 	}
+
+
+    /**
+     * En metod som räknar ut potentiell energi med massa och höjden
+     * @param mass - En variabel som är massan
+     * @param height - En variabel som är höjden
+     * @return - potentialEnergy
+     */
+	public static double potentialEnergy(double mass, double height){
+        double potentialEnergy = mass*9.82*height;
+        return potentialEnergy;
+}
+
+    /**
+     *
+     * @param height
+     * @return
+     */
+    public static double fallSpeed(double height){
+	    double fallSpeed = height*9.82;
+	    return fallSpeed;
+    }
 }
