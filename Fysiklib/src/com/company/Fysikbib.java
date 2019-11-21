@@ -97,7 +97,7 @@ public class Fysikbib<thePressure> {
      * @return - fallSpeed
      */
     public static double fallSpeed(double height){
-	    double fallSpeed = 9.82/height;
+	    double fallSpeed = Math.sqrt(2*G*height);
 	    return fallSpeed;
     }
 }
