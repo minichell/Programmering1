@@ -3,6 +3,12 @@ package com.company;
 import static com.company.FluidTable.H20;
 
 public class Fysikbib<thePressure> {
+	static double G = 9.82;
+	static double P_0 = 101.3E3;
+	static double R = 8.3145;
+	static double C = 2.99792458;
+	static double G_= 6.6726 * 1E-11;
+	static double LY = 9.46055 * 1E15;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -12,7 +18,7 @@ public class Fysikbib<thePressure> {
 		System.out.println(pressureUnderWater(10));
 		System.out.println(kineticEnergi(2,2));
         System.out.println(potentialEnergy(2,5));
-
+		System.out.println(fallSpeed(2.5));
 	}
 
 	/**
@@ -86,12 +92,12 @@ public class Fysikbib<thePressure> {
 }
 
     /**
-     *
-     * @param height
-     * @return
+     * En metod som räknar ut hur hög hastighet man kommer upp i som man släpper föremål från en viss höjd
+     * @param height - En variabel som är höjden
+     * @return - fallSpeed
      */
     public static double fallSpeed(double height){
-	    double fallSpeed = height*9.82;
+	    double fallSpeed = 9.82/height;
 	    return fallSpeed;
     }
 }
