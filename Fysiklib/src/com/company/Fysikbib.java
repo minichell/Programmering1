@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.org.apache.bcel.internal.util.ClassStack;
+
 import static com.company.FluidTable.H20;
 
 public class Fysikbib<thePressure> {
@@ -19,6 +21,7 @@ public class Fysikbib<thePressure> {
 		System.out.println(kineticEnergi(2,2));
         System.out.println(potentialEnergy(2,5));
 		System.out.println(fallSpeed(2.5));
+		System.out.println(delta(1,10));
 	}
 
 	/**
@@ -87,7 +90,7 @@ public class Fysikbib<thePressure> {
      * @return - potentialEnergy
      */
 	public static double potentialEnergy(double mass, double height){
-        double potentialEnergy = mass*9.82*height;
+        double potentialEnergy = mass*G*height;
         return potentialEnergy;
 }
 
@@ -100,4 +103,15 @@ public class Fysikbib<thePressure> {
 	    double fallSpeed = Math.sqrt(2*G*height);
 	    return fallSpeed;
     }
+
+	/**
+	 * En metod som räknar ut skillnaden mellan två givna värden
+	 * @param first - Den första värden
+	 * @param last - Den andra värden
+	 * @return -  delta
+	 */
+    public static double delta(double first, double last){
+    	double delta = last - first;
+    	return delta;
+	}
 }
