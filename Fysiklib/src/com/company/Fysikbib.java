@@ -22,8 +22,8 @@ public class Fysikbib<thePressure> {
         System.out.println(potentialEnergy(2,5));
 		System.out.println(fallSpeed(2.5));
 		System.out.println(delta(1,10));
+        System.out.println(volumeToMass(FluidTable.WATER, 1));
 	}
-
 	/**
 	 * En metod för att konvertera temperaturen från fahrenheit till celsius
 	 *
@@ -57,9 +57,7 @@ public class Fysikbib<thePressure> {
 		double thePressure = 0;
 		thePressure = fluid.density * 9.82 * deep;
 		return thePressure;
-
 	}
-
 	/**
 	 * En metod som räknar ut vätsketrycket i vatten vid ett visst djup
 	 * @param deep - En variabel som är höjden
@@ -69,7 +67,6 @@ public class Fysikbib<thePressure> {
 		double thePressure = H20.density*9.82*deep;
 		return thePressure;
 }
-
 	/**
 	 * En metod som räknar ut kinetisk energi med hjälp av massa och hastighet
 	 * @param mass - En variabel som är vikten/massa
@@ -81,8 +78,6 @@ public class Fysikbib<thePressure> {
 		double kineticEnergi = 0.5*mass*velocity*velocity;
 		return kineticEnergi;
 	}
-
-
     /**
      * En metod som räknar ut potentiell energi med massa och höjden
      * @param mass - En variabel som är massan
@@ -93,7 +88,6 @@ public class Fysikbib<thePressure> {
         double potentialEnergy = mass*G*height;
         return potentialEnergy;
 }
-
     /**
      * En metod som räknar ut hur hög hastighet man kommer upp i som man släpper föremål från en viss höjd
      * @param height - En variabel som är höjden
@@ -114,4 +108,16 @@ public class Fysikbib<thePressure> {
     	double delta = last - first;
     	return delta;
 	}
+
+    /**
+     * En metod som gör en viss volym av vätska till en massa
+     * @param fluid - En variabel som är densitetet
+     * @param volume - En variabel som är volumen
+     * @return - volumeToMass
+     */
+	public static double volumeToMass(FluidTable fluid, double volume){
+        double volumeToMass = 0;
+        volumeToMass = volume*fluid.density;
+        return  volumeToMass;
+    }
 }
