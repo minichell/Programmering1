@@ -29,6 +29,7 @@ public class Fysikbib<thePressure> {
 		System.out.println(svtVelocity(10,5));
 		System.out.println(svtDistance(10,5));
 		System.out.println(svtTime(10,2));
+		System.out.println(work(50,10));
 	}
 	/**
 	 * En metod för att konvertera temperaturen från fahrenheit till celsius
@@ -186,5 +187,17 @@ public class Fysikbib<thePressure> {
 		double Time = 0;
 		Time = distance/velocity;
 		return Time;
+	}
+
+	/**
+	 * En metod som räknar ut arbete med hjälp av kraft och sträcka
+	 * @param force - En variabel som är kraft
+	 * @param distance - En variabel som är sträcka
+	 * @return - work
+	 */
+	public static double work(double force, double distance){
+		double work = 0;
+		work = force*distance;
+		return work;
 	}
 }
