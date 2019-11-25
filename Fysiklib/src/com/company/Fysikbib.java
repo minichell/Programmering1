@@ -26,6 +26,7 @@ public class Fysikbib<thePressure> {
         System.out.println(volumeToMass(FluidTable.WATER, 1));
 		System.out.println(volumeToMass(GasTable.AIR,1));
 		System.out.println(volumeToMass(SolidTable.IRON,1));
+		System.out.println(svtVelocity(10,5));
 	}
 	/**
 	 * En metod för att konvertera temperaturen från fahrenheit till celsius
@@ -147,5 +148,17 @@ public class Fysikbib<thePressure> {
 		double solidMass = 0;
 		solidMass = volume*solid.density;
 		return solidMass;
+	}
+
+	/**
+	 * En metod som räknar ut medelhastigheten med hjälp av sträcka och tid
+	 * @param distance - En variabel som är distans
+	 * @param time - En variabel som är tiden
+	 * @return - Velocity
+	 */
+	public static double svtVelocity(double distance, double time){
+		double Velocity = 0;
+		Velocity = distance/time;
+		return Velocity;
 	}
 }
