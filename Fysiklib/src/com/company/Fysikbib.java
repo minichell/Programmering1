@@ -25,6 +25,7 @@ public class Fysikbib<thePressure> {
 		System.out.println(delta(1,10));
         System.out.println(volumeToMass(FluidTable.WATER, 1));
 		System.out.println(volumeToMass(GasTable.AIR,1));
+		System.out.println(volumeToMass(SolidTable.IRON,1));
 	}
 	/**
 	 * En metod för att konvertera temperaturen från fahrenheit till celsius
@@ -134,5 +135,17 @@ public class Fysikbib<thePressure> {
 		double gasMass = 0;
 		gasMass = volume*gas.density;
 		return gasMass;
+	}
+
+	/**
+	 * En metod som gör en viss volym av materia till en massa.
+	 * @param solid - En variabel
+	 * @param volume - En variabel
+	 * @return solidMass
+	 */
+	public static double volumeToMass(SolidTable solid, double volume){
+		double solidMass = 0;
+		solidMass = volume*solid.density;
+		return solidMass;
 	}
 }
