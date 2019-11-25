@@ -1,6 +1,7 @@
 package com.company;
 
 import com.sun.org.apache.bcel.internal.util.ClassStack;
+import com.sun.xml.internal.bind.v2.runtime.output.StAXExStreamWriterOutput;
 
 import static com.company.FluidTable.H20;
 
@@ -23,11 +24,12 @@ public class Fysikbib<thePressure> {
 		System.out.println(fallSpeed(2.5));
 		System.out.println(delta(1,10));
         System.out.println(volumeToMass(FluidTable.WATER, 1));
+		System.out.println(volumeToMass(GasTable.AIR,1));
 	}
 	/**
 	 * En metod för att konvertera temperaturen från fahrenheit till celsius
 	 *
-	 * @param fahrenheit - variabel som är temperaturen
+	 * @param fahrenheit - variabel som är temperaturen i fahrenheit
 	 * @return - Celsius
 	 */
 	public static double fahrenheitToCelsius(double fahrenheit) {
@@ -120,4 +122,17 @@ public class Fysikbib<thePressure> {
         volumeToMass = volume*fluid.density;
         return  volumeToMass;
     }
+
+	/**
+	 * En metod som räknar ut vad en gas volym väger i massa
+	 *
+	 * @param gas -  en variabel
+	 * @param volume - en variabel
+	 * @return - gasMass
+	 */
+	public static double volumeToMass(GasTable gas, double volume){
+		double gasMass = 0;
+		gasMass = volume*gas.density;
+		return gasMass;
+	}
 }
