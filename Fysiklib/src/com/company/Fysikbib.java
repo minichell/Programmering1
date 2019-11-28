@@ -15,8 +15,17 @@ public class Fysikbib<thePressure> {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(volumeToMass(SolidTable.IRON,0.008) + "kg");
+		System.out.println("Hur mycket väger 60 dm^3 järn?");
+		// 60dm^3 är 0,6m^3
+		System.out.println(volumeToMass(SolidTable.IRON,0.06) + "kg");
+		System.out.println("Hur långt hinner Tomas om han löper med medelhastigheten 2.7 m/s i 50 minuter?");
+		// 50 minuter är 3000 sekunder
 		System.out.println(svtDistance(2.7,3000));
+
+
+
+		System.out.println(heat(FluidTable.WATER, 4,78));
+		System.out.println(pressureUnderWater(75);
 
 	}
 	/**
@@ -55,7 +64,7 @@ public class Fysikbib<thePressure> {
 	}
 	/**
 	 * En metod som räknar ut vätsketrycket i vatten vid ett visst djup
-	 * @param deep - En variabel som är höjden
+	 * @param deep - En variabel som är höjden i meter
 	 * @return - thePressure
 	 */
 	public static double pressureUnderWater(double deep) {
@@ -75,8 +84,8 @@ public class Fysikbib<thePressure> {
 	}
     /**
      * En metod som räknar ut potentiell energi med massa och höjden
-     * @param mass - En variabel som är massan
-     * @param height - En variabel som är höjden
+     * @param mass - En variabel som är massan i kilogram
+     * @param height - En variabel som är höjden i meter
      * @return - potentialEnergy
      */
 	public static double potentialEnergy(double mass, double height){
@@ -85,7 +94,7 @@ public class Fysikbib<thePressure> {
 }
     /**
      * En metod som räknar ut hur hög hastighet man kommer upp i som man släpper föremål från en viss höjd
-     * @param height - En variabel som är höjden
+     * @param height - En variabel som är höjden i meter
      * @return - fallSpeed
      */
     public static double fallSpeed(double height){
@@ -106,8 +115,8 @@ public class Fysikbib<thePressure> {
 
     /**
      * En metod som gör en viss volym av vätska till en massa
-     * @param fluid - En variabel som är densitetet
-     * @param volume - En variabel som är volumen
+     * @param fluid - En variabel som är densitetet i kg/m^3
+     * @param volume - En variabel som är volumen i m^3 (kubikmeter)
      * @return - volumeToMass
      */
 	public static double volumeToMass(FluidTable fluid, double volume){
@@ -120,7 +129,7 @@ public class Fysikbib<thePressure> {
 	 * En metod som räknar ut vad en gas volym väger i massa
 	 *
 	 * @param gas -  en variabel
-	 * @param volume - en variabel
+	 * @param volume - en variabel i kubikmeter
 	 * @return - gasMass
 	 */
 	public static double volumeToMass(GasTable gas, double volume){
@@ -132,7 +141,7 @@ public class Fysikbib<thePressure> {
 	/**
 	 * En metod som gör en viss volym av materia till en massa.
 	 * @param solid - En variabel
-	 * @param volume - En variabel
+	 * @param volume - En variabel som är m^3 (kubikmeter)
 	 * @return solidMass
 	 */
 	public static double volumeToMass(SolidTable solid, double volume){
@@ -143,8 +152,8 @@ public class Fysikbib<thePressure> {
 
 	/**
 	 * En metod som räknar ut medelhastigheten med hjälp av sträcka och tid
-	 * @param distance - En variabel som är distans
-	 * @param time - En variabel som är tiden
+	 * @param distance - En variabel som är distans för sträcka i meter
+	 * @param time - En variabel som är tiden i sekunder
 	 * @return - Velocity
 	 */
 	public static double svtVelocity(double distance, double time){
@@ -155,8 +164,8 @@ public class Fysikbib<thePressure> {
 
 	/**
 	 * En medtod som räknar ut sträcka med hjälp av hastighet och tid
-	 * @param velocity - En variabel som är hastigheten
-	 * @param time - En variabel som är tid
+	 * @param velocity - En variabel som är hastigheten i meter per sekund
+	 * @param time - En variabel som är tid i sekunder
 	 * @return - Distance
 	 */
 	public static double svtDistance(double velocity, double time){
@@ -167,8 +176,8 @@ public class Fysikbib<thePressure> {
 
 	/**
 	 * En metid som räknar ut tid med hjälp av sträcka och hastighet.
-	 * @param distance - En variabel som är sträcka
-	 * @param velocity - En variabel som är hastigheten
+	 * @param distance - En variabel som är sträcka i meter
+	 * @param velocity - En variabel som är hastigheten i meter per sekund
 	 * @return - Time
 	 */
 	public static double svtTime(double distance, double velocity){
@@ -179,8 +188,8 @@ public class Fysikbib<thePressure> {
 
 	/**
 	 * En metod som räknar ut arbete med hjälp av kraft och sträcka
-	 * @param force - En variabel som är kraft
-	 * @param distance - En variabel som är sträcka
+	 * @param force - En variabel som är kraft i Newton
+	 * @param distance - En variabel som är sträcka i meter
 	 * @return - work
 	 */
 	public static double work(double force, double distance){
@@ -191,8 +200,8 @@ public class Fysikbib<thePressure> {
 
 	/**
 	 * En metod som räknar ut effekt med hjälp av arbete och tid
-	 * @param work - En variabel som är arbete
-	 * @param time - En variabel som är tiden
+	 * @param work - En variabel som är arbete newton*meter
+	 * @param time - En variabel som är tiden i sekunder
 	 * @return - power
 	 */
 	public static double power(double work, double time){
@@ -204,7 +213,7 @@ public class Fysikbib<thePressure> {
 	/**
 	 * En metod som räknar ut hur mycket energi som krävs för att värma ett visst material ett angivet antal grader
 	 * @param solid - Ett ämne
-	 * @param mass - En variabel som är massa
+	 * @param mass - En variabel som är massa i kilogram
 	 * @param deltaT - Delta
 	 * @return - heat
 	 */
@@ -229,8 +238,8 @@ public class Fysikbib<thePressure> {
 
 	/**
 	 * metod som räknar ut hur mycket energi som krävs för att värma en viss massa gas ett angivet antal grader.
-	 * @param gas - Variabel som är masa
-	 * @param mass - En variabel som är massa
+	 * @param gas - Variabel som är gasen
+	 * @param mass - En variabel som är massa i kilogram
 	 * @param deltaT - Delta
 	 * @return - heat
 	 */
@@ -242,7 +251,7 @@ public class Fysikbib<thePressure> {
 
 	/**
 	 * En metod som räknar ut hur högt ett föremål med en viss hastighet uppåt kommer.
-	 * @param velocity - En variabel som är hastigheten
+	 * @param velocity - En variabel som är hastigheten i meter per sekund
 	 * @return - formen för height
 	 */
 	public static double velocityToHeight(double velocity){
