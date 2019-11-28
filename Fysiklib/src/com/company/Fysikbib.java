@@ -40,7 +40,8 @@ public class Fysikbib<thePressure> {
 		System.out.println("En bil minskar farten med konstant acceleration från 25m/s till 15m/s på 3.2 sekunder. Bestäm accelerationen");
 		// För att få accelerationen tar man delta V (hastigheten) delat med tiden
 		System.out.println(acceleration(25,15,3.2));
-
+		System.out.println("Ett föremål påverkas av två krafter, 8N riktad åt höger och 17N riktad åt vänster. Bestäm den resulterande kraften.");
+		System.out.println(theResultForce(8.0,17.0) + "N");
 
 
 
@@ -293,7 +294,25 @@ public class Fysikbib<thePressure> {
 		}
 		return counterBounces;
 	}
-	public static double acceleration(double firstvelocity, double lastvelocity,double time){
-		return (firstvelocity-lastvelocity)/time;
+
+	/**
+	 * En metod som beräknar accelerationen med hjälp av delta hastigheten och tiden
+	 * @param firstVelocity - Är starthastigheten
+	 * @param lastVelocity - Är sluthastigheten
+	 * @param time - tiden i sekunder
+	 * @return - returnar formeln för accelerationen
+	 */
+	public static double acceleration(double firstVelocity, double lastVelocity,double time){
+		return (firstVelocity-lastVelocity)/time;
+	}
+
+	/**
+	 * En metod som räknar ut den resulterande kraften med hjälp av F1 och F2
+	 * @param F1 - Första kraften
+	 * @param F2 - Andra kraften
+	 * @return - Returnar svaret på den resulterande kraften
+	 */
+	public static double theResultForce( double F1, double F2){
+		return F1-F2;
 	}
 }
