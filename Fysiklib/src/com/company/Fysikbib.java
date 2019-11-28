@@ -15,26 +15,8 @@ public class Fysikbib<thePressure> {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(fahrenheitToCelsius(50));
-		System.out.println(kelvinToCelsius(0));
-		System.out.println(fluidPressure(FluidTable.WATER, 10));
-		System.out.println(pressureUnderWater(10));
-		System.out.println(kineticEnergi(2,2));
-        System.out.println(potentialEnergy(2,5));
-		System.out.println(fallSpeed(2.5));
-		System.out.println(delta(1,10));
-        System.out.println(volumeToMass(FluidTable.WATER, 1));
-		System.out.println(volumeToMass(GasTable.AIR,1));
-		System.out.println(volumeToMass(SolidTable.IRON,1));
-		System.out.println(svtVelocity(10,5));
-		System.out.println(svtDistance(10,5));
-		System.out.println(svtTime(10,2));
-		System.out.println(work(50,10));
-		System.out.println(power(1000,2));
-		System.out.println(heat(SolidTable.IRON,1,2));
-		System.out.println(heat(FluidTable.WATER,1,10));
-		System.out.println(heat(GasTable.AIR,1,1));
-		System.out.println(velocityToHeight(9.82));
+		System.out.println(volumeToMass(SolidTable.IRON,0.008) + "kg");
+
 
 	}
 	/**
@@ -258,6 +240,11 @@ public class Fysikbib<thePressure> {
 		return heat;
 	}
 
+	/**
+	 * En metod som räknar ut hur högt ett föremål med en viss hastighet uppåt kommer.
+	 * @param velocity - En variabel som är hastigheten
+	 * @return - formen för height
+	 */
 	public static double velocityToHeight(double velocity){
 		return Math.pow(velocity,2)/(2*9.82);
 }
