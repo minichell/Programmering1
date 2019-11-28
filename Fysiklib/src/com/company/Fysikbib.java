@@ -37,6 +37,9 @@ public class Fysikbib<thePressure> {
 		System.out.println(power( 580500, 4.8) + "W");
 		System.out.println("En studsboll som väger 1kg släpps från 12 meters höjd och varje gång den nuddar marken tappar den 1% av sin energi. Hur många gånger kommer bollen studsa i marken innan den inte studsar hörge än 0.5 meter?");
 		System.out.println(numberOfBounces(12));
+		System.out.println("En bil minskar farten med konstant acceleration från 25m/s till 15m/s på 3.2 sekunder. Bestäm accelerationen");
+		// För att få accelerationen tar man delta V (hastigheten) delat med tiden
+		System.out.println(acceleration(25,15,3.2));
 
 
 
@@ -290,5 +293,7 @@ public class Fysikbib<thePressure> {
 		}
 		return counterBounces;
 	}
-
+	public static double acceleration(double firstvelocity, double lastvelocity,double time){
+		return (firstvelocity-lastvelocity)/time;
+	}
 }
