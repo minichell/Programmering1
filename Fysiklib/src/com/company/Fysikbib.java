@@ -34,6 +34,7 @@ public class Fysikbib<thePressure> {
 		System.out.println(heat(SolidTable.IRON,1,2));
 		System.out.println(heat(FluidTable.WATER,1,10));
 		System.out.println(heat(GasTable.AIR,1,1));
+		System.out.println(velocityToHeight(9.82));
 
 	}
 	/**
@@ -256,5 +257,9 @@ public class Fysikbib<thePressure> {
 		heat = gas.heatCapacity*mass*deltaT;
 		return heat;
 	}
+
+	public static double velocityToHeight(double velocity){
+		return Math.pow(velocity,2)/(2*9.82);
+}
 
 }
