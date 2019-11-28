@@ -36,7 +36,7 @@ public class Fysikbib<thePressure> {
 		// Arbete är F*S (sträcka) = 580500 newtonmeter (Nm)
 		System.out.println(power( 580500, 4.8) + "W");
 		System.out.println("En studsboll som väger 1kg släpps från 12 meters höjd och varje gång den nuddar marken tappar den 1% av sin energi. Hur många gånger kommer bollen studsa i marken innan den inte studsar hörge än 0.5 meter?");
-		System.out.println();
+		System.out.println(numberOfBounces(12));
 
 
 
@@ -273,5 +273,22 @@ public class Fysikbib<thePressure> {
 	public static double velocityToHeight(double velocity){
 		return Math.pow(velocity,2)/(2*9.82);
 }
+
+	/**
+	 * En metod som räknar ut hur mpnga gånger en boll kommer studsa omd en förlorar 1% av sin energi efter varje studs, med hjälp av en while-loop
+	 * @param height - En variabel som är höjden i meter
+	 * @return - Returnar counterBounces alltså antal gånger bollen har studsat.
+	 */
+	public static double numberOfBounces(double height){
+		double finalEnergy = height*9.82;
+		int counterBounces = 0;
+		double i = 12;
+		while (i >=0.5){
+			finalEnergy *=0.99;
+			i = finalEnergy / 9.82;
+			counterBounces++;
+		}
+		return counterBounces;
+	}
 
 }
