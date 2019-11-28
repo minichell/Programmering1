@@ -16,7 +16,7 @@ public class Fysikbib<thePressure> {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(volumeToMass(SolidTable.IRON,0.008) + "kg");
-
+		System.out.println(svtDistance(2.7,3000));
 
 	}
 	/**
