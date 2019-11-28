@@ -26,12 +26,22 @@ public class Fysikbib<thePressure> {
 		System.out.println(heat(FluidTable.WATER,4,78));
 		System.out.println("Hur stort är det totala trycket 75 meter under havsytan?");
 		System.out.println(fluidPressure(FluidTable.WATER,75));
-		System.out.println("");
+		System.out.println("Tomas som är 180cm lång kastar upp en boll med massan 250 gram i luften så den får starthastigheten 60 km/h. Hur högt kommer bollen?");
+		// 60km/h är 16.67 m/s och 180cm är 1.8 meter
+		System.out.println(velocityToHeight(16.6) + 1.8 + "meter");
+		System.out.println("En bil med massan 735kg accelererar med konstant acceleration från 0-100 på 4.8 sekunder. Hur stor effekt har bilens motor uppnått?");
+		// 100km/h är 27,78 m/s
+		// acceleration är 27,78 m/s / 4.8 = 5.7 m/s^2
+		// Kraft m*a = 735kg*5.7m/s^2 = 4353,4 Newton (N)
+		// Arbete är F*S (sträcka) = 580500 newtonmeter (Nm)
+		System.out.println(power( 580500, 4.8) + "W");
+		System.out.println("En studsboll som väger 1kg släpps från 12 meters höjd och varje gång den nuddar marken tappar den 1% av sin energi. Hur många gånger kommer bollen studsa i marken innan den inte studsar hörge än 0.5 meter?");
+		System.out.println();
 
 
 
 
-		System.out.println(pressureUnderWater(75);
+
 
 	}
 	/**
