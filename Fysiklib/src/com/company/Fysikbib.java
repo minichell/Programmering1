@@ -32,7 +32,9 @@ public class Fysikbib<thePressure> {
 		System.out.println(work(50,10));
 		System.out.println(power(1000,2));
 		System.out.println(heat(SolidTable.IRON,1,2));
+		System.out.println(heat(FluidTable.WATER,1,10));
 		System.out.println(heat(GasTable.AIR,1,1));
+
 	}
 	/**
 	 * En metod för att konvertera temperaturen från fahrenheit till celsius
@@ -230,7 +232,20 @@ public class Fysikbib<thePressure> {
 	}
 
 	/**
-	 * En metod som äknar ut hur mycket energi som krävs för att värma en viss massa gas ett angivet antal grader.
+	 * En metod som räknar ut hur mycket energi som krävs för att värma en viss massa vätska ett angivet antal grader.
+	 * @param fluid - Ett ämne
+	 * @param mass -  En variabel som är massan
+	 * @param deltaT - delta
+	 * @return - heat
+	 */
+	public static double heat(FluidTable fluid, double mass, double deltaT){
+		double heat = 0;
+		heat = fluid.heatCapacity*mass*deltaT;
+		return heat;
+	}
+
+	/**
+	 * metod som räknar ut hur mycket energi som krävs för att värma en viss massa gas ett angivet antal grader.
 	 * @param gas - Variabel som är masa
 	 * @param mass - En variabel som är massa
 	 * @param deltaT - Delta
@@ -241,4 +256,5 @@ public class Fysikbib<thePressure> {
 		heat = gas.heatCapacity*mass*deltaT;
 		return heat;
 	}
+
 }
