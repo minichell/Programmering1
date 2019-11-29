@@ -42,11 +42,6 @@ public class Fysikbib<thePressure> {
 		System.out.println(acceleration(25,15,3.2));
 		System.out.println("Ett föremål påverkas av två krafter, 8N riktad åt höger och 17N riktad åt vänster. Bestäm den resulterande kraften.");
 		System.out.println(theResultForce(8.0,17.0) + "N");
-
-
-
-
-
 	}
 	/**
 	 * En metod för att konvertera temperaturen från fahrenheit till celsius
@@ -308,11 +303,12 @@ public class Fysikbib<thePressure> {
 
 	/**
 	 * En metod som räknar ut den resulterande kraften med hjälp av F1 och F2
-	 * @param F1 - Första kraften
-	 * @param F2 - Andra kraften
+	 * @param F1 - Första kraften i Newton
+	 * @param F2 - Andra kraften i Newton
 	 * @return - Returnar svaret på den resulterande kraften
 	 */
 	public static double theResultForce( double F1, double F2){
 		return F1-F2;
 	}
+
 }
