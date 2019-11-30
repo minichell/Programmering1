@@ -312,7 +312,6 @@ public class Fysikbib<thePressure> {
 	 * @return - Returnar svaret på den resulterande kraften
 	 */
 	public static double theResultForce( double F1, double F2){
-
 		return F1-F2;
 	}
 
@@ -328,5 +327,14 @@ public class Fysikbib<thePressure> {
 		return momentum;
 	}
 
-
+	/**
+	 * En metod som beräknar ut en volym för cylindern
+	 * @param radie - En variabel som är radie i centimeter
+	 * @return - volymecylinder
+	 */
+	public static double volymecylinder(double radie){
+		double volymecylinder = 0;
+		volymecylinder = (4*Math.PI*radie*radie*radie)/3;
+		return volymecylinder;
+	}
 }
