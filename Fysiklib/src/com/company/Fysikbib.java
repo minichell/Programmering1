@@ -341,12 +341,24 @@ public class Fysikbib<thePressure> {
 	/**
 	 * En metod som beräknar en volym för kon
 	 * @param radie - Radien för formeln
-	 * @param height -  höjden för formeln i centimeter
+	 * @param height -  höjden för formeln
 	 * @return - volymecone
 	 */
-	public static  double volymecone(double radie, double height){
+	public static double volymecone(double radie, double height){
 		double volymecone = 0;
 		volymecone = (Math.PI*radie*radie*height)/3;
 		return volymecone;
+	}
+
+	/**
+	 * En metod som beräknar Potentiell energi (lägesenergi) med hjälp av gravitationen, massa och höjden.
+	 * @param mass - massa i kilogram
+	 * @param height - höjden i meter
+	 * @return - modeEnergy
+	 */
+	public static double modeEnergy(double mass, double height){
+		double modeEnergy = 0;
+		modeEnergy = mass*G*height;
+		return modeEnergy;
 	}
 }
