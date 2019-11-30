@@ -55,6 +55,7 @@ public class Fysikbib<thePressure> {
 	 */
 	public static double fahrenheitToCelsius(double fahrenheit) {
 		double celsius = (fahrenheit - 32) * 5 / 9;
+
 		return celsius;
 	}
 
@@ -66,6 +67,7 @@ public class Fysikbib<thePressure> {
 	 */
 	public static double kelvinToCelsius(double kelvin) {
 		double celsius = kelvin - 273.15;
+
 		return celsius;
 	}
 
@@ -79,6 +81,7 @@ public class Fysikbib<thePressure> {
 	public static double fluidPressure(FluidTable fluid, double deep) {
 		double thePressure = 0;
 		thePressure = fluid.density * 9.82 * deep;
+
 		return thePressure;
 	}
 	/**
@@ -88,6 +91,7 @@ public class Fysikbib<thePressure> {
 	 */
 	public static double pressureUnderWater(double deep) {
 		double thePressure = H20.density*9.82*deep;
+
 		return thePressure;
 }
 	/**
@@ -99,6 +103,7 @@ public class Fysikbib<thePressure> {
 	 */
 	public static double kineticEnergi(double mass, double velocity){
 		double kineticEnergi = 0.5*mass*velocity*velocity;
+
 		return kineticEnergi;
 	}
     /**
@@ -118,6 +123,7 @@ public class Fysikbib<thePressure> {
      */
     public static double fallSpeed(double height){
 	    double fallSpeed = Math.sqrt(2*G*height);
+
 	    return fallSpeed;
     }
 
@@ -129,6 +135,7 @@ public class Fysikbib<thePressure> {
 	 */
     public static double delta(double first, double last){
     	double delta = last - first;
+
     	return delta;
 	}
 
@@ -141,6 +148,7 @@ public class Fysikbib<thePressure> {
 	public static double volumeToMass(FluidTable fluid, double volume){
         double volumeToMass = 0;
         volumeToMass = volume*fluid.density;
+
         return  volumeToMass;
     }
 
@@ -166,6 +174,7 @@ public class Fysikbib<thePressure> {
 	public static double volumeToMass(SolidTable solid, double volume){
 		double solidMass = 0;
 		solidMass = volume*solid.density;
+
 		return solidMass;
 	}
 
@@ -178,6 +187,7 @@ public class Fysikbib<thePressure> {
 	public static double svtVelocity(double distance, double time){
 		double Velocity = 0;
 		Velocity = distance/time;
+
 		return Velocity;
 	}
 
@@ -190,6 +200,7 @@ public class Fysikbib<thePressure> {
 	public static double svtDistance(double velocity, double time){
 		double Distance = 0;
 		Distance = velocity*time;
+
 		return Distance;
 	}
 
@@ -202,6 +213,7 @@ public class Fysikbib<thePressure> {
 	public static double svtTime(double distance, double velocity){
 		double Time = 0;
 		Time = distance/velocity;
+
 		return Time;
 	}
 
@@ -214,6 +226,7 @@ public class Fysikbib<thePressure> {
 	public static double work(double force, double distance){
 		double work = 0;
 		work = force*distance;
+
 		return work;
 	}
 
@@ -226,6 +239,7 @@ public class Fysikbib<thePressure> {
 	public static double power(double work, double time){
 		double power = 0;
 		power = work/time;
+
 		return power;
 	}
 
@@ -239,6 +253,7 @@ public class Fysikbib<thePressure> {
 	public static double heat(SolidTable solid, double mass, double deltaT){
 		double heat = 0;
 		heat = mass*deltaT*solid.heatCapacity;
+
 		return heat;
 	}
 
@@ -252,6 +267,7 @@ public class Fysikbib<thePressure> {
 	public static double heat(FluidTable fluid, double mass, double deltaT){
 		double heat = 0;
 		heat = fluid.heatCapacity*mass*deltaT;
+
 		return heat;
 	}
 
@@ -265,6 +281,7 @@ public class Fysikbib<thePressure> {
 	public static double heat(GasTable gas, double mass,double deltaT){
 		double heat = 0;
 		heat = gas.heatCapacity*mass*deltaT;
+
 		return heat;
 	}
 
@@ -302,6 +319,7 @@ public class Fysikbib<thePressure> {
 	 * @return - returnar formeln för accelerationen
 	 */
 	public static double acceleration(double firstVelocity, double lastVelocity,double time){
+
 		return (firstVelocity-lastVelocity)/time;
 	}
 
@@ -312,6 +330,7 @@ public class Fysikbib<thePressure> {
 	 * @return - Returnar svaret på den resulterande kraften
 	 */
 	public static double theResultForce( double F1, double F2){
+
 		return F1-F2;
 	}
 
@@ -324,6 +343,7 @@ public class Fysikbib<thePressure> {
 	public static double momentum( double mass, double velocity){
 		double momentum = 0;
 		momentum = mass*velocity;
+
 		return momentum;
 	}
 
@@ -335,6 +355,7 @@ public class Fysikbib<thePressure> {
 	public static double volymecylinder(double radie){
 		double volymecylinder = 0;
 		volymecylinder = (4*Math.PI*radie*radie*radie)/3;
+
 		return volymecylinder;
 	}
 
@@ -347,6 +368,7 @@ public class Fysikbib<thePressure> {
 	public static double volymecone(double radie, double height){
 		double volymecone = 0;
 		volymecone = (Math.PI*radie*radie*height)/3;
+
 		return volymecone;
 	}
 
@@ -359,6 +381,22 @@ public class Fysikbib<thePressure> {
 	public static double modeEnergy(double mass, double height){
 		double modeEnergy = 0;
 		modeEnergy = mass*G*height;
+
 		return modeEnergy;
 	}
+
+	/**
+	 * En metod som omvandlar meter till centimeter.
+	 * @param meter - En variabel
+	 * @return - MeterToCentimeter
+	 */
+	public static double MeterToCentimeter( double meter){
+		double  MeterToCentimeter= 0;
+		MeterToCentimeter = meter*100;
+
+		return MeterToCentimeter;
+
+	}
+
+
 }
