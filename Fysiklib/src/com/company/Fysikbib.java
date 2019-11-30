@@ -42,6 +42,10 @@ public class Fysikbib<thePressure> {
 		System.out.println(acceleration(25,15,3.2));
 		System.out.println("Ett föremål påverkas av två krafter, 8N riktad åt höger och 17N riktad åt vänster. Bestäm den resulterande kraften.");
 		System.out.println(theResultForce(8.0,17.0) + "N");
+		System.out.println("Beräkna ut rörelsemängden när en bil åker med 20m/s och har massa för 140kg. ");
+		System.out.println(momentum(20,140));
+
+
 	}
 	/**
 	 * En metod för att konvertera temperaturen från fahrenheit till celsius
@@ -308,7 +312,21 @@ public class Fysikbib<thePressure> {
 	 * @return - Returnar svaret på den resulterande kraften
 	 */
 	public static double theResultForce( double F1, double F2){
+
 		return F1-F2;
 	}
+
+	/**
+	 * En metod som räknar ut rörelsemängden i ett viss föremål
+	 * @param mass- Massan i kilogram
+	 * @param velocity - hastigheten inom meter per sekund
+	 * @return - momentum
+	 */
+	public static double momentum( double mass, double velocity){
+		double momentum = 0;
+		momentum = mass*velocity;
+		return momentum;
+	}
+
 
 }
