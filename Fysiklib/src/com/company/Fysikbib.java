@@ -409,4 +409,16 @@ public class Fysikbib<thePressure> {
 		return MeterPerSecondToKilometerPerHour;
 	}
 
+	/**
+	 * En metod som omvandlar til till kilogram
+	 * @param mass - Massa i ton
+	 * @return - Ton till Kilogram
+	 */
+
+	public static double TonToKilogram(double mass){
+		double TonToKilogram = 0;
+		TonToKilogram = mass*1000;
+
+		return TonToKilogram;
+	}
 }
