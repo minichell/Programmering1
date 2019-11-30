@@ -391,12 +391,22 @@ public class Fysikbib<thePressure> {
 	 * @return - MeterToCentimeter
 	 */
 	public static double MeterToCentimeter( double meter){
-		double  MeterToCentimeter= 0;
+		double  MeterToCentimeter = 0;
 		MeterToCentimeter = meter*100;
 
 		return MeterToCentimeter;
-
 	}
 
+	/**
+	 * En metod som omvandlar meter per sekund till kilometer per timma
+	 * @param velocity - hastigheten inom meter per sekund
+	 * @return - MeterPerSecondToKilometerPerHour
+	 */
+	public static double MeterPerSecondToKilometerPerHour(double velocity){
+		double MeterPerSecondToKilometerPerHour = 0;
+		MeterPerSecondToKilometerPerHour = velocity*3.6;
+
+		return MeterPerSecondToKilometerPerHour;
+	}
 
 }
