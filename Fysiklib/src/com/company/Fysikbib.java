@@ -337,4 +337,16 @@ public class Fysikbib<thePressure> {
 		volymecylinder = (4*Math.PI*radie*radie*radie)/3;
 		return volymecylinder;
 	}
+
+	/**
+	 * En metod som beräknar en volym för kon
+	 * @param radie - Radien för formeln
+	 * @param height -  höjden för formeln i centimeter
+	 * @return - volymecone
+	 */
+	public static  double volymecone(double radie, double height){
+		double volymecone = 0;
+		volymecone = (Math.PI*radie*radie*height)/3;
+		return volymecone;
+	}
 }
