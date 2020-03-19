@@ -32,7 +32,7 @@ public class Main {
     protected static void guessingNumberGame(){
 
         do {
-            while (run){
+            while (run) {
 
                 System.out.println("Welcome to guessing number game!");
                 System.out.println();
@@ -46,11 +46,20 @@ public class Main {
                         "3. Difficulty Level");
                 System.out.println();
                 System.out.println("Choose the number down below!");
+
+
             }
 
         }
     }
 
-
+    protected static void easyLevel(){
+        System.out.flush();
+        System.out.println("You have only 10 guesses");
+        numberOfGuesses = 10;
+        System.out.println("You are going to guess between 0-10");
+        minimumNumber = 0;
+        maximumNumber = 10;
+    }
 }
 
