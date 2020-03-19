@@ -21,27 +21,43 @@ public class Main {
                 guessingNumberGame();
         }
 
-        protected static void guessingNumberGame(){
+        protected static void guessingNumberGame() {
 
-                        while (run) {
-                                System.out.println("Welcome to guessing number game");
-                                System.out.println();
-                                System.out.println("On this game you have only 10 chances\"to guess right.\n" +
-                                        "If you guess right, you win the game.\n" +
-                                        "If you don't don't have guesses left, you lose the game.");
-                                System.out.println();
-                                System.out.println("Choose the level that you want to play: \n 1. Easy level\n + 2. Medium level\n +" +
-                                        "3. difficulty level");
-                                System.out.println();
-                                System.out.println("Choose the number down below");
-
-
-                choosingLevel = inputFromPlayer.nextInt();
-
-
-                        }
-
+                while (run) {
+                        System.out.println("Welcome to guessing number game");
+                        System.out.println();
+                        System.out.println("On this game you have only 10 chances to guess right.\n" +
+                                "If you guess right, you win the game.\n" +
+                                "If you don't don't have guesses left, you lose the game.");
+                        System.out.println();
+                        System.out.println("Choose the level that you want to play: \n 1. Easy level\n 2. Medium level\n 3. difficulty level");
+                        System.out.println();
+                        System.out.println("Choose the number down below");
 
                 }
+
+        }
+
+                protected static void easyLevel () {
+                        System.out.flush();
+                        System.out.println("You have only 10 guesses");
+                        numberOfGuesses = 10;
+                        System.out.println("You are going to guess between 0-10 ");
+                        minimunNumber = 0;
+                        maximumNumber = 10;
+                }
+
+                protected static void MediumLevel () {
+                        System.out.flush();
+                        System.out.println("You have only 10 guesses");
+                        numberOfGuesses = 10;
+                        System.out.println("You are going to guess between 0-50");
+                        minimunNumber = 0;
+                        maximumNumber = 10;
+                }
+
+
+
+
 
         }
