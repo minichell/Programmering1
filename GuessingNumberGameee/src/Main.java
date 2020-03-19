@@ -52,8 +52,6 @@ public class Main {
             }
 
 
-        }
-
     protected static void easyLevel(){
         System.out.flush();
         System.out.println("You have only 10 guesses");
@@ -73,7 +71,15 @@ public class Main {
 
         }
 
+    protected static void difficultyLevel(){
+                System.out.flush();
+                System.out.println("You have only 10 guesses");
+                numberOfGuesses = 10;
+                System.out.println("You are going to guess between 0-100");
+                minimumNumber = 0;
+                maximumNumber = 100;
             }
+
     }
 }
 
