@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -50,8 +51,8 @@ public class Main {
 
             }
 
+
         }
-    }
 
     protected static void easyLevel(){
         System.out.flush();
@@ -60,6 +61,19 @@ public class Main {
         System.out.println("You are going to guess between 0-10");
         minimumNumber = 0;
         maximumNumber = 10;
+    }
+
+    protected static void mediumLevel(){
+            System.out.flush();
+            System.out.println("You have only 10 guesses");
+            numberOfGuesses = 10;
+            System.out.println("You are going to guess between 0-50");
+            minimumNumber = 0;
+            maximumNumber = 50;
+
+        }
+
+            }
     }
 }
 
