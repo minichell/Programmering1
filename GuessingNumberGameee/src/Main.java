@@ -29,6 +29,28 @@ public class Main {
 
     }
 
+    protected static void guessingNumberGame(){
+
+        do {
+            while (run){
+
+                System.out.println("Welcome to guessing number game!");
+                System.out.println();
+                System.out.println("On this game you have only 10 chances to guess right\n" +
+                        "If you guess right, you win the game\n" +
+                        "If you don't have any guesses left, you lose the game.");
+                System.out.println();
+                System.out.println("Choose the level that you want to play:\n " +
+                        "1. Eassy Level\n " +
+                        "2. Medium Level\n" +
+                        "3. Difficulty Level");
+                System.out.println();
+                System.out.println("Choose the number down below!");
+            }
+
+        }
+    }
+
 
 }
 
