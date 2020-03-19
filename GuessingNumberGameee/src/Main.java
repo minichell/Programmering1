@@ -12,6 +12,7 @@ public class Main {
     protected static int numberOfGuesses;
     protected static int guessedNumber;
     protected static int playAgainOrQuit;
+    protected static boolean run = true;
 
 
 
