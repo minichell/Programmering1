@@ -14,5 +14,6 @@ public class Main {
         protected static int numberOfGuesses; // the number of guesses that player gets from the beginning
         protected static int guessedNumber; //that number that the player guessed
         protected static boolean run = true; //the program will run when is it true
+        protected static int playAgainOrQuit; //the player choosing if he wants to play again or not
     }
 
