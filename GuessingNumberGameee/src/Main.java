@@ -50,6 +50,16 @@ public class Main {
                 switch (choosingLevel) {
 
                     case 1:
+                        easyLevel();
+                    break;
+
+                    case 2:
+                        mediumLevel();
+                    break;
+
+                    case 3:
+                        difficultyLevel();
+                    break;
 
 
                 }
