@@ -36,6 +36,9 @@ public class Main {
                                 System.out.println("Choose the number down below");
 
 
+                choosingLevel = inputFromPlayer.nextInt();
+
+
                         }
 
 
