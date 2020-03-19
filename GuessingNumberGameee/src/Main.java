@@ -22,15 +22,15 @@ public class Main {
         // write your code here
     }
 
-    protected static int getRightNumber(int maximumNumber, int minimumNumber){
-        Random rightNumber = new Random();
+    protected static int rightNumber(int maximumNumber, int minimumNumber){
+        Random rightNum = new Random();
 
-        return rightNumber.nextInt(maximumNumber - minimumNumber +1) +
+        return rightNum.nextInt(maximumNumber - minimumNumber +1) +
                 minimumNumber;
 
     }
 
-    protected static void guessingNumberGame(){
+    protected static void guessingNumberGame() {
 
         do {
             while (run) {
@@ -50,7 +50,9 @@ public class Main {
 
 
             }
+        }
 
+    }
 
     protected static void easyLevel(){
         System.out.flush();
@@ -80,6 +82,39 @@ public class Main {
                 maximumNumber = 100;
             }
 
+    private static void systemOfTheGame(){
+        System.out.println("Guess a number");
+        rightNumber = rightNumber( maximumNumber, minimumNumber);
+
+        for(int i = 1; i <= numberOfGuesses; i--){
+            guessedNumber = inputFromPlayer.nextInt();
+            numberOfGuesses --;
+
+        if(guessedNumber == rightNumber) {
+            System.out.println("Congrats!\n " +
+                    "You won the game");
+            System.out.println();
+
+            break;
+        }
+
+        else if( numberOfGuesses !=0){
+            if(guessedNumber > rightNumber)
+                System.out.println("Sorry you guessed wrong\n" +
+                        "the number is lower\n" +
+                        "you have"+ guessesLeft + "guesses left");
+
+        } else if(guessedNumber < rightNumber){
+            System.out.println("Sorry you guessed wrong\n" +
+                    "the number is higher\n" +
+                    "You have" + guessesLeft + "guesses left");
+        }
+
+        }
+        else{
+            System.out.println("Sorry you lost the game");
+        }
     }
+
 }
 
