@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ddf9c9dd-336e-47a9-bc45-0f084c83fb18" name="Default Changelist" comment="">
+    <list default="true" id="ddf9c9dd-336e-47a9-bc45-0f084c83fb18" name="Default Changelist" comment="skapade en metod för spelets funktion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
@@ -58,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584351595940</updated>
-      <workItem from="1584351600264" duration="7779000" />
+      <workItem from="1584351600264" duration="12282000" />
     </task>
     <task id="LOCAL−00001" summary="lade till en scanner">
       <created>1584610705962</created>
@@ -90,7 +90,19 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1584619593266</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="skapade 2 metoder = easy level och medium level">
+      <created>1584621136120</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1584621136120</updated>
+    </task>
+    <task id="LOCAL−00007" summary="skapade en metod för en svår level">
+      <created>1584621334674</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1584621334674</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,13 +114,16 @@
     <MESSAGE value="lagt till en metod om spelaren vill spela igen eller avsluta" />
     <MESSAGE value="skriver in om hur spelet går till" />
     <MESSAGE value="spelaren skriver in vilken level som personen vill köra" />
-    <option name="LAST_COMMIT_MESSAGE" value="spelaren skriver in vilken level som personen vill köra" />
+    <MESSAGE value="skapade 2 metoder = easy level och medium level" />
+    <MESSAGE value="skapade en metod för en svår level" />
+    <MESSAGE value="skapade en metod för spelets funktion" />
+    <option name="LAST_COMMIT_MESSAGE" value="skapade en metod för spelets funktion" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="234" y="7" key="CommitChangelistDialog2" timestamp="1584621135586">
+    <state x="234" y="7" key="CommitChangelistDialog2" timestamp="1584623886403">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="234" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584621135586" />
+    <state x="234" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584623886403" />
     <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1584352162108">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -133,10 +148,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584352197193" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1584617670441">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1584621337871">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584617670441" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584621337871" />
     <state x="470" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584351602221">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
