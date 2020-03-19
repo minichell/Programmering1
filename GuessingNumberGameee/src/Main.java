@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -19,5 +20,15 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
     }
+
+    protected static int getRightNumber(int maximumNumber, int minimumNumber){
+        Random rightNumber = new Random();
+
+        return rightNumber.nextInt(maximumNumber - minimumNumber +1) +
+                minimumNumber;
+
+    }
+
+
 }
 
