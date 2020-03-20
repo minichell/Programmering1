@@ -31,7 +31,10 @@ public class Main {
 
 
     public static void systemOfTheGame(){
-
+        rightNumber = answerNum(maximumNumber, minimumNumber);
+        for (int i = 1; i <= numberOfGuesses; i--) {
+            guessedNumber = inputFromPlayer.nextInt();
+            numberOfGuesses--;
 
 
     }
