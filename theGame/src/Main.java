@@ -27,15 +27,37 @@ public class Main {
 
     }
 
+    public static void
 
 
-
-    public static void systemOfTheGame(){
+    public static void systemOfTheGame() {
         rightNumber = answerNum(maximumNumber, minimumNumber);
         for (int i = 1; i <= numberOfGuesses; i--) {
             guessedNumber = inputFromPlayer.nextInt();
             numberOfGuesses--;
 
+            boolean correct = false;
 
+            while(!correct)  {
+            System.out.println("Guess");
+            guessedNumber = inputFromPlayer.nextInt();
+            if (guessedNumber == rightNumber) {
+                System.out.println("Congrats!\n " +
+                        "You won the game");
+                System.out.println();
+            }
+            else if(guessedNumber < rightNumber){
+                System.out.println("Sorry you guessed wrong\n" +
+                        "the number is higher\n" +
+                        "You have "  + numberOfGuesses +  " guesses left");
+            }
+            else if(guessedNumber > rightNumber){
+                System.out.println("Sorry you guessed wrong\n" +
+                        "the number is lower\n" +
+                        "you have "  + numberOfGuesses +  " guesses left");
+
+            }
+        }
+    }
     }
 }
