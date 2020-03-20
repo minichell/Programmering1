@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
-public class theGame {
+public class Main {
 
     static Scanner inputFromPlayer = new Scanner(System.in);
+
+
 }
