@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -14,5 +15,24 @@ public class Main {
     public static int playAgainOrQuit;
     public static boolean run = true;
 
+    public static void main(String[] args){
 
+    }
+
+    public static int answerNum(int maximumNumber, int minimumNumber) {
+        Random rightNum = new Random();
+
+        return rightNum.nextInt(maximumNumber - minimumNumber + 1) +
+                minimumNumber;
+
+    }
+
+
+
+
+    public static void systemOfTheGame(){
+
+
+
+    }
 }
