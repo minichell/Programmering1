@@ -27,18 +27,40 @@ public class Main {
 
     }
 
-    public static void
+    public static void easyLevel(){
+        System.out.flush();
+        System.out.println("You have only 10 guesses");
+        System.out.println("You are going to guess between 0-10");
+        maximumNumber = 10;
 
+        systemOfTheGame();
+    }
 
-    public static void systemOfTheGame() {
+    public static void mediumLevel() {
+        System.out.flush();
+        System.out.println("You have only 10 guesses");
+        numberOfGuesses = 10;
+        System.out.println("You are going to guess between 0-50");
+        maximumNumber = 50;
+        systemOfTheGame();
+
+    }
+
+    public static void difficultyLevel() {
+        System.out.flush();
+        System.out.println("You have only 10 guesses");
+        numberOfGuesses = 10;
+        System.out.println("You are going to guess between 0-100");
+        minimumNumber = 0;
+        maximumNumber = 100;
+        systemOfTheGame();
+    }
+    public static void systemOfTheGame(){
         rightNumber = answerNum(maximumNumber, minimumNumber);
         for (int i = 1; i <= numberOfGuesses; i--) {
             guessedNumber = inputFromPlayer.nextInt();
             numberOfGuesses--;
 
-            boolean correct = false;
-
-            while(!correct)  {
             System.out.println("Guess");
             guessedNumber = inputFromPlayer.nextInt();
             if (guessedNumber == rightNumber) {
@@ -58,6 +80,5 @@ public class Main {
 
             }
         }
-    }
     }
 }
