@@ -16,7 +16,7 @@ public class Main {
     public static boolean run = true;
 
     public static void main(String[] args){
-
+        guessingNumberGame();
     }
 
     public static int answerNum(int maximumNumber, int minimumNumber) {
@@ -24,6 +24,17 @@ public class Main {
 
         return rightNum.nextInt(maximumNumber - minimumNumber + 1) +
                 minimumNumber;
+
+    }
+
+
+    public static void guessingNumberGame(){
+        System.out.println("Welcome to guessing number game!");
+        System.out.println();
+        System.out.println("On this game you have only 10 chances to guess right\n" +
+                "If you guess right, you win the game\n" +
+                "If you don't have any guesses left, you lose the game.");
+        System.out.println();
 
     }
 
