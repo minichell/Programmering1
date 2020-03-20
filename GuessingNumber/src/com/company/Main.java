@@ -7,148 +7,154 @@ public class Main {
 
         static Scanner inputFromPlayer = new Scanner(System.in);
 
-        protected static int choosingLevel; //the level the player chose
-        protected static int theMinimumNumber; //the lowest number
-        protected static int theMaximumNumber; //the max number
-        protected static int theRightNumber; //the random number
-        protected static int guessesLeft; //the number of guesses that player has left
-        protected static int theNumberOfGuesses; // the number of guesses that player gets from the beginning
-        protected static int guessedNumber; //that number that the player guessed
-        protected static boolean run = true; //the program will run when is it true
-        protected static int playAgainOrQuit; //the player choosing if he wants to play again or not
+        protected static int choosingLevel;
+        protected static int minimumNumber;
+        protected static int maximumNumber;
+        protected static int rightNumber;
+        protected static int guessesLeft;
+        protected static int numberOfGuesses;
+        protected static int guessedNumber;
+        protected static int playAgainOrQuit;
+        protected static boolean run = true;
+
 
         public static void main(String[] args) {
-
                 guessingNumberGame();
         }
 
-        protected static int theRightNumber(int theMaximumNumber, int theMinimumNumber){
-                Random rightNumber = new Random();
+        protected static int rightNumber(int maximumNumber, int minimumNumber) {
+                Random rightNum = new Random();
 
-                return rightNumber.nextInt(theMaximumNumber - theMinimumNumber +1) +
-                        theMinimumNumber;
+                return rightNum.nextInt(maximumNumber - minimumNumber + 1) +
+                        minimumNumber;
+
         }
 
-        protected static void guessingNumberGame() {
+        protected static void guessingNumberGame(){
 
-                while (run) {
-                        System.out.println("Welcome to guessing number game");
-                        System.out.println();
-                        System.out.println("On this game you have only 10 chances to guess right.\n" +
-                                "If you guess right, you win the game.\n" +
-                                "If you don't don't have guesses left, you lose the game.");
-                        System.out.println();
-                        System.out.println("Choose the level that you want to play: \n 1. Easy level\n 2. Medium level\n 3. difficulty level");
-                        System.out.println();
-                        System.out.println("Choose the number down below");
+                do {
 
-                switch (choosingLevel){
-                        case 1:
-                                easyLevel();
 
-                        case 2:
-                                mediumLevel();
+                        while (run) {
 
-                        case 3:
+                                System.out.println("Welcome to guessing number game!");
+                                System.out.println();
+                                System.out.println("On this game you have only 10 chances to guess right\n" +
+                                        "If you guess right, you win the game\n" +
+                                        "If you don't have any guesses left, you lose the game.");
+                                System.out.println();
+                                System.out.println("Choose the level that you want to play:\n " +
+                                        "1. Eassy Level\n " +
+                                        "2. Medium Level\n" +
+                                        "3. Difficulty Level");
+                                System.out.println();
+                                System.out.println("Choose the number down below!");
 
-                                difficultyLevel();
+                                switch (choosingLevel) {
 
-                                break;
+                                        case 1:
+                                                easyLevel();
+                                                break;
 
-                }
+                                        case 2:
+                                                mediumLevel();
+                                                break;
 
-                        System.out.println("Do you want to play again?");
-                        System.out.println();
-                        System.out.println("Choose the number");
-                        System.out.println("1.Yes");
-                        System.out.println("2. No");
-                        System.out.println();
+                                        case 3:
+                                                difficultyLevel();
+                                                break;
 
-                 playAgainOrQuit= inputFromPlayer.nextInt();
+                                }
+                                System.out.println("Do you want to play again?");
+                                System.out.println();
+                                System.out.println("Write he number that you want");
+                                System.out.println("1.Yes");
+                                System.out.println("2.No");
+                                System.out.println();
 
-                 switch (playAgainOrQuit){
-
-                         case 1;
-                         break;
-
-                         case 2;
-
-                         run = false;
-                                 System.out.println();
-                                 System.out.println("Goodbye");
-                 }
+                                playAgainOrQuit = inputFromPlayer.nextInt();
+                                switch (playAgainOrQuit) {
+                                        case 1:
+                                                break;
+                                        case 2:
+                                                run = false;
+                                                System.out.println();
+                                                System.out.println("Goodbye!");
+                                }
+                        }
+                }while (run);
         }
-                {
-                        while (run) ;
-                }
-                protected static void easyLevel(){
-                        System.out.flush();
-                        System.out.println("You have only 10 guesses");
-                        theNumberOfGuesses = 10;
-                        System.out.println("You are going to guess between 0-10 ");
-                        theMinimumNumber = 0;
-                        theMaximumNumber = 10;
 
-                        systemOfTheGame();
-                }
+        protected static void easyLevel(){
+                System.out.flush();
+                System.out.println("You have only 10 guesses");
+                int numberOfGuesses = 10;
+                System.out.println("You are going to guess between 0-10");
+                int minimumNumber = 0;
+                int maximumNumber = 10;
 
-                protected static void mediumLevel(){
-                        System.out.flush();
-                        System.out.println("You have only 10 guesses");
-                        theNumberOfGuesses = 10;
-                        System.out.println("You are going to guess between 0-50");
-                        theMinimumNumber = 0;
-                        theMaximumNumber = 50;
+                systemOfTheGame();
+        }
 
-                        systemOfTheGame();
-                }
+        protected static void mediumLevel() {
+                System.out.flush();
+                System.out.println("You have only 10 guesses");
+                int numberOfGuesses = 10;
+                System.out.println("You are going to guess between 0-50");
+                int minimumNumber = 0;
+                int maximumNumber = 50;
 
-                protected static void difficultyLevel(){
-                        System.out.flush();
-                        System.out.println("You have only 10 guesses");
-                        theNumberOfGuesses = 10;
-                        System.out.println("You are going to guess between 0-100");
-                        theMinimumNumber = 0;
-                        theMaximumNumber = 100;
+                systemOfTheGame();
 
-                        systemOfTheGame();
-                }
+        }
 
+        protected static void difficultyLevel() {
+                System.out.flush();
+                System.out.println("You have only 10 guesses");
+                int numberOfGuesses = 10;
+                System.out.println("You are going to guess between 0-100");
+                int minimumNumber = 0;
+                int maximumNumber = 100;
+
+                systemOfTheGame();
+        }
 
         private static void systemOfTheGame() {
-               System.out.println("Guess a number");
-               theRightNumber = theRightNumber(theMaximumNumber, theMinimumNumber);
+                System.out.println("Guess a number");
+                rightNumber = rightNumber(maximumNumber, minimumNumber);
 
-               for (int i = 1; <= theNumberOfGuesses; i--){
+                for (int i = 1; i <= numberOfGuesses; i--) {
+                        guessedNumber = inputFromPlayer.nextInt();
+                        numberOfGuesses--;
 
-                       guessedNumber = inputFromPlayer.nextInt();
-                       theNumberOfGuesses--;
+                        if (guessedNumber == rightNumber) {
+                                System.out.println("Congrats!\n " +
+                                        "You won the game");
+                                System.out.println();
 
-                       if (guessedNumber == theRightNumber) {
-                               System.out.println("Congrats!\n You won the game");
-                               System.out.println();
+                                break;
+                        }
+                        else if (numberOfGuesses != 0) {
+                                if (guessedNumber > rightNumber) {
+                                        System.out.println("Sorry you guessed wrong\n" +
+                                                "the number is lower\n" +
+                                                "you have" + guessesLeft + "guesses left");
 
-                               break;
-                       }
+                                } else if (guessedNumber < rightNumber) {
+                                        System.out.println("Sorry you guessed wrong\n" +
+                                                "the number is higher\n" +
+                                                "You have" + guessesLeft + "guesses left");
 
-                       else if (theNumberOfGuesses != 0) {
+                                }
+                        }
+                        else{
+                                System.out.println("Sorry you lost the game");
 
-                               if (guessedNumber > theRightNumber) {
-                                       System.out.println("Sorry you guessed wrong\n " +
-                                               "the number is lower\n" +
-                                               "You have" + guessesLeft + "guesses left");
-
-                               } else if (guessedNumber < theRightNumber) {
-                                       System.out.println("Sorry you guessed wrong\n" +
-                                               "the number is higher\n" +
-                                               "You have" + guessesLeft + "guesses left");
-                               }
-                       }
-                       else {
-                               System.out.println(" Sorry you lost the game");
-
-                               break;
-                       }
-               }
-       }
+                                break;
+                        }
+                }
+        }
 }
+
+
+
