@@ -111,7 +111,7 @@ public class Main {
 
     /**
      *
-     * This method contains the easiest mode of this game.
+     * This method contains the easiest level of this game.
      */
     public static void easyLevel() {
         System.out.flush();
@@ -124,7 +124,10 @@ public class Main {
         systemOfTheGame();
     }
 
-
+    /**
+     *
+     * This method contains the medium level of this game.
+     */
     public static void mediumLevel() {
         System.out.flush();
         System.out.println("You have only 10 guesses");
@@ -136,6 +139,10 @@ public class Main {
 
     }
 
+    /**
+     *
+     * This method contains the hardest level of this game.
+     */
     public static void difficultyLevel() {
         System.out.flush();
         System.out.println("You have only 10 guesses");
