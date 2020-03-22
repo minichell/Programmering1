@@ -9,7 +9,7 @@ public class Main {
     static Scanner inputFromPlayer = new Scanner(System.in); //the player have able to put an input
 
     public static int chooseLevel; //the player that player can choose between
-    public static int minimumNumber = 0;
+    public static int minimumNumber = 0; //the lowest number in the interval
     public static int maximumNumber;
     public static int rightNumber;
     public static int guessesLeft;
