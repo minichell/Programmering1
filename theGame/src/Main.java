@@ -15,7 +15,7 @@ public class Main {
     public static int guessesLeft; //how many guesses left that player has
     public static int numberOfGuesses = 10; //the player get 10 guesses from the beginning
     public static int guessedNumber; //the number that player guessed on
-    public static int playAgainOrQuit;
+    public static int playAgainOrQuit; //the player can choose to play again or not
 
     public static void main(String[] args) {
         guessingNumberGame();
