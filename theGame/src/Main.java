@@ -35,6 +35,11 @@ public class Main {
 
     }
 
+    /**
+     *
+     * This method is for giving person information about the game
+     * This will contain the whole game
+     */
     public static void guessingNumberGame() {
 
             System.out.println("Welcome to guessing number game!");
@@ -59,7 +64,7 @@ public class Main {
             }
             catch (Exception e){
                 System.out.println("Try to write a number pls");
-                inputFromPlayer.nextInt();
+                inputFromPlayer.nextLine();
                 continue;
             }
         }
@@ -72,7 +77,7 @@ public class Main {
         System.out.println("1.Yes\n"+"2.No");
         System.out.println();
 
-        playAgainOrQuit = inputFromPlayer.nextInt();
+        playAgainOrQuit = isNextIntValid();
 
         if (playAgainOrQuit == 1) {
                 guessingNumberGame();
@@ -83,7 +88,7 @@ public class Main {
     }
 
     public static void choosingLevel() {
-        chooseLevel = inputFromPlayer.nextInt();
+        chooseLevel = isNextIntValid();
         if (chooseLevel == 1) {
             easyLevel();
         } else if (chooseLevel == 2) {
@@ -131,7 +136,7 @@ public class Main {
         rightNumber = answerNum(maximumNumber, minimumNumber);
              System.out.println("Guess a number");
         for (int i = 1; i <= numberOfGuesses; i--) {
-            guessedNumber = inputFromPlayer.nextInt();
+            guessedNumber = isNextIntValid();
             numberOfGuesses--;
 
             if (guessedNumber == rightNumber) {
