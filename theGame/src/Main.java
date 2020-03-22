@@ -11,7 +11,7 @@ public class Main {
     public static int chooseLevel; //the player that player can choose between
     public static int minimumNumber = 0; //the lowest number in the interval
     public static int maximumNumber; //the highest number in the interval
-    public static int rightNumber;
+    public static int rightNumber; //the right random answer
     public static int guessesLeft;
     public static int numberOfGuesses = 10;
     public static int guessedNumber;
