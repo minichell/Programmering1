@@ -75,6 +75,9 @@ public class Main {
         }
     }
 
+    /**
+     * A method that player can choose if he wants to play again or not
+     */
     public static void playingAgainOrNot() {
         System.out.println("Do you want to play again?");
         System.out.println();
@@ -92,6 +95,9 @@ public class Main {
         }
     }
 
+    /**
+     * A method that player can choose which level he wants to plat
+     */
     public static void choosingLevel() {
         chooseLevel = isNextIntValid();
         if (chooseLevel == 1) {
