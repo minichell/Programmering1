@@ -13,7 +13,7 @@ public class Main {
     public static int maximumNumber; //the highest number in the interval
     public static int rightNumber; //the right random answer
     public static int guessesLeft; //how many guesses left that player has
-    public static int numberOfGuesses = 10;
+    public static int numberOfGuesses = 10; //the player get 10 guesses from the beginning
     public static int guessedNumber;
     public static int playAgainOrQuit;
 
