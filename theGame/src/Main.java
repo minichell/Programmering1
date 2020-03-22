@@ -109,7 +109,10 @@ public class Main {
         }
     }
 
-
+    /**
+     *
+     * This method contains the easiest mode of this game.
+     */
     public static void easyLevel() {
         System.out.flush();
         numberOfGuesses = 10;
@@ -120,6 +123,7 @@ public class Main {
 
         systemOfTheGame();
     }
+
 
     public static void mediumLevel() {
         System.out.flush();
