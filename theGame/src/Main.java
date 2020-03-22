@@ -57,6 +57,11 @@ public class Main {
             choosingLevel();
     }
 
+    /**
+     *
+     * A method for makes it sure that the game will not crash
+     * @return an int-input from the player
+     */
     public static int isNextIntValid(){
         while (true){
             try{
