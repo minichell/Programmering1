@@ -21,6 +21,12 @@ public class Main {
         guessingNumberGame();
     }
 
+    /**
+     * This is a method for the random answer
+     * @param maximumNumber the highest number in the interval
+     * @param minimumNumber the lowest number in the interval
+     * @return the number which the player has to guess
+     */
     public static int answerNum(int maximumNumber, int minimumNumber) {
         Random rightNum = new Random();
 
@@ -46,7 +52,18 @@ public class Main {
             choosingLevel();
     }
 
-
+    public static int isNextIntValid(){
+        while (true){
+            try{
+                return inputFromPlayer.nextInt();
+            }
+            catch (Exception e){
+                System.out.println("Try to write a number pls");
+                inputFromPlayer.nextInt();
+                continue;
+            }
+        }
+    }
 
     public static void playingAgainOrNot() {
         System.out.println("Do you want to play again?");
