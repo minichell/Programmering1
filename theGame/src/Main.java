@@ -14,7 +14,7 @@ public class Main {
     public static int rightNumber; //the right random answer
     public static int guessesLeft; //how many guesses left that player has
     public static int numberOfGuesses = 10; //the player get 10 guesses from the beginning
-    public static int guessedNumber;
+    public static int guessedNumber; //the number that player guessed on
     public static int playAgainOrQuit;
 
     public static void main(String[] args) {
