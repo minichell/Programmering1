@@ -154,6 +154,10 @@ public class Main {
         systemOfTheGame();
     }
 
+    /**
+     *
+     * A method that makes the game works
+     */
     public static void systemOfTheGame() {
         rightNumber = answerNum(maximumNumber, minimumNumber);
              System.out.println("Guess a number");
