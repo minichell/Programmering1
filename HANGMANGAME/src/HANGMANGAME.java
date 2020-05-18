@@ -1,8 +1,9 @@
-
+import java.util.Random;
 import java.util.Scanner;
 public class HANGMANGAME {
 
     static Scanner PlayerInput = new Scanner (System.in);
+    public static Random random = new Random();
     public static int chooselevel;
     public static int chooseTheme;
     public static int numberOfGuesses;
@@ -86,7 +87,10 @@ public class HANGMANGAME {
         }
     }
 
-
+    public static void colorToGuess (){
+        String[] colorWords = {"pink" , "yellow" , "orange"};
+        char []  randomColor = colorWords [random.nextInt (colorWords.length)].toCharArray();
+    }
 
     public static int IsNextIntValid (){
         while (true){
