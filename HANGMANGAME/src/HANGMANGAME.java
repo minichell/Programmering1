@@ -4,7 +4,10 @@ public class HANGMANGAME {
 
     static Scanner PlayerInput = new Scanner (System.in);
     public static int chooselevel;
+    public static int chooseTheme;
     public static int numberOfGuesses;
+
+
     public static void main (String [] args){
         startPosition();
     }
@@ -29,7 +32,18 @@ public class HANGMANGAME {
 
         while (true){
             chooselevel = IsNextIntValid();
-
+            if(chooselevel == 1){
+                easyLevel();
+                break;
+            } else if (chooselevel == 2) {
+                mediumLevel();
+                break;
+            } else if(chooselevel == 3) {
+                difficultyLevel();
+                break;
+            } else {
+                System.out.println("PLs answer 1 or 2 or 3 pls!");
+            }
         }
     }
 
@@ -47,6 +61,31 @@ public class HANGMANGAME {
         numberOfGuesses = 4;
         System.out.println("You will get 4 guesses");
     }
+
+    public static void choosingTheme(){
+        System.out.println("Choose the theme that you want to guess: \n" +
+                "1.Color \n" +
+                "2.Furniture \n" +
+                "3. Activities \n");
+
+        while (true) {
+            chooseTheme = IsNextIntValid();
+
+            if(chooseTheme == 1){
+
+                break;
+            } else if (chooseTheme == 2){
+
+                break;
+            } else if (chooseTheme == 3){
+
+                break;
+            } else {
+                System.out.println("Pls answer 1 or 2 or 3");
+            }
+        }
+    }
+
 
 
     public static int IsNextIntValid (){
