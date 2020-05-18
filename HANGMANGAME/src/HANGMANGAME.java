@@ -7,6 +7,7 @@ public class HANGMANGAME {
     public static int chooselevel;
     public static int chooseTheme;
     public static int numberOfGuesses;
+    public static char [] randomColor;
 
 
     public static void main (String [] args){
@@ -90,6 +91,14 @@ public class HANGMANGAME {
     public static void colorToGuess (){
         String[] colorWords = {"pink" , "yellow" , "orange"};
         char []  randomColor = colorWords [random.nextInt (colorWords.length)].toCharArray();
+    }
+
+    public static void playerGuessSetup(){
+        int varietyOfGuesses = randomColor.length;
+        char [] thePlayerGuess = new char [varietyOfGuesses];
+        for (int i = 0; i < thePlayerGuess.length; i++){
+            thePlayerGuess[i] = '-';
+        }
     }
 
     public static int IsNextIntValid (){
