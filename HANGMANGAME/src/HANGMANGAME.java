@@ -4,6 +4,7 @@ public class HANGMANGAME {
 
     static Scanner PlayerInput = new Scanner (System.in);
     public static int chooselevel;
+    public static int numberOfGuesses;
     public static void main (String [] args){
         startPosition();
     }
@@ -31,6 +32,22 @@ public class HANGMANGAME {
 
         }
     }
+
+    public static void easyLevel(){
+        numberOfGuesses = 8;
+        System.out.println("You will get 8 guesses");
+    }
+
+    public static void mediumLevel(){
+        numberOfGuesses = 6;
+        System.out.println("You will get 6 guesses");
+    }
+
+    public static void difficultyLevel(){
+        numberOfGuesses = 4;
+        System.out.println("You will get 4 guesses");
+    }
+
 
     public static int IsNextIntValid (){
         while (true){
