@@ -7,15 +7,12 @@ public class theHangManGame {
     public static char[] theCorrectGuesses;
     public static char[] randomWord;
     public static int wordLength;
-
+    public static int numberOfWrongGuesses;
 
     public static void main(String[] args){
         startPosition();
-        randomWord();
 
     }
-
-
 
 
     public static void randomWord(){
@@ -68,14 +65,26 @@ public class theHangManGame {
                 System.out.println("Pls right 1 or 2 or 3 pls!");
             }
         }
-
     }
 
-    public static void easyGame(){}
-    public static void mediumGame(){}
-    public static void difficultyGame(){}
+    public static void easyGame(){
+        numberOfWrongGuesses = 12;
+        System.out.println("You have 6 free wrong guesses before the hangman start to hang!");
+        hangManGame();
+    }
+
+    public static void mediumGame(){
+        numberOfWrongGuesses = 8;
+        System.out.println("You have 2 free wrong guesses before the hangman start to hang!");
+    }
+
+    public static void difficultyGame(){
+        numberOfWrongGuesses = 6;
+        System.out.println("The hangman will start hanging if you guess wrong");
+    }
 
     public static void hangManGame(){
-
+        System.out.println("The word is:");
+        randomWord();
     }
 }
