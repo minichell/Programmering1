@@ -102,6 +102,7 @@ public class theHangManGame {
     public static void mediumGame() {
         numberOfWrongGuesses = 8;
         System.out.println("You have 2 free wrong guesses before the hangman start to hang!");
+        hangManGame();
     }
 
     /**
