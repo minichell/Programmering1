@@ -15,7 +15,6 @@ public class theHangManGame {
     public static void main(String[] args) {
         randomWord();
         startPosition();
-
     }
 
     /**
@@ -125,7 +124,7 @@ public class theHangManGame {
         while (allowLetter) {
             // The while-loop runs until the input is a letter.
             theGuess = input.next().charAt(0); //Taking only the first input letter.
-            String player = String.valueOf(theGuess);
+            String player = String.valueOf(theGuess); //returns the string representation of the char argument.
             if (!player.matches("[a-zA-Z]+")) {
                 System.out.println("Pls write a letter");
             } else if (player.matches("[a-zA-Z]+")) {
@@ -152,7 +151,7 @@ public class theHangManGame {
             guessedWord = ifTheWordIsGuessed();
             System.out.println("The word: " + Arrays.toString(theCorrectGuesses));
             System.out.println("Your wrong guesses: " + incorrectGuesses);
-            System.out.println("You have " + numberOfWrongGuesses + " left.");
+            System.out.println("You have " + numberOfWrongGuesses + " guesses left.");
         }
         if (numberOfWrongGuesses == 0 || guessedWord != true) {
             System.out.println("You lost");
@@ -165,7 +164,7 @@ public class theHangManGame {
     /**
      * A method that checks if the letter of the input is correct or not.
      * It will either add the correct letter in the correct list or add the wrong letter in the incorrect list, depends what the player guessed on.
-     * It will also print out the hangman
+     * It will also print out the hangman.
      */
     public static void isTheLetterCorrect() {
         boolean theLetterIsAlreadyGuessed = false;
@@ -183,7 +182,6 @@ public class theHangManGame {
             numberOfWrongGuesses--;
             printOutHangMan();
         }
-
     }
 
     /**
@@ -302,5 +300,4 @@ public class theHangManGame {
                     "==========");
         }
     }
-
 }
