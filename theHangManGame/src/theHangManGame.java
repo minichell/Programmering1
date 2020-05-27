@@ -18,45 +18,6 @@ public class theHangManGame {
     }
 
     /**
-     * A method that will choose a random word from the list by generate a random index to pick out a word.
-     * wordLength is the number of the word that will randomize.
-     */
-    public static void randomWord() {
-        String[] guesses = {"computer", "flower", "phone", "shoes", "football", "chips", "clothes"};
-        randomWord = guesses[random.nextInt(guesses.length)].toCharArray();
-        wordLength = randomWord.length;
-        createGuesses();
-    }
-
-    /**
-     * A method that create a char-Array where the correct letters of the player will be.
-     * The '-' stands for unknown letter that the player will guess on.
-     */
-    public static void createGuesses() {
-        theCorrectGuesses = new char[wordLength];
-        for (int i = 0; i < theCorrectGuesses.length; i++) {
-            theCorrectGuesses[i] = '-';
-        }
-        System.out.println(theCorrectGuesses);
-    }
-
-    /**
-     * A method for make it sure that the game will not crash.
-     * @returnan an in-put from the player.
-     */
-    public static int isNextIntValid() {
-        while (true) {
-            try {
-                return input.nextInt();
-            } catch (Exception e) {
-                System.out.println("Try to write a number pls");
-                input.nextLine();
-                continue;
-            }
-        }
-    }
-
-    /**
      * This method is for giving the player information about this game.
      * The player will choose a level that he or she wants to play.
      */
@@ -114,6 +75,45 @@ public class theHangManGame {
         numberOfWrongGuesses = 6;
         System.out.println("The hangman will start hanging if you guess wrong, you will have 6 wrong guesses");
         hangManGame();
+    }
+
+    /**
+     * A method that will choose a random word from the list by generate a random index to pick out a word.
+     * wordLength is the number of the word that will randomize.
+     */
+    public static void randomWord() {
+        String[] guesses = {"computer", "flower", "phone", "shoes", "football", "chips", "clothes"};
+        randomWord = guesses[random.nextInt(guesses.length)].toCharArray();
+        wordLength = randomWord.length;
+        createGuesses();
+    }
+
+    /**
+     * A method that create a char-Array where the correct letters of the player will be.
+     * The '-' stands for unknown letter that the player will guess on.
+     */
+    public static void createGuesses() {
+        theCorrectGuesses = new char[wordLength];
+        for (int i = 0; i < theCorrectGuesses.length; i++) {
+            theCorrectGuesses[i] = '-';
+        }
+        System.out.println(theCorrectGuesses);
+    }
+
+    /**
+     * A method for make it sure that the game will not crash.
+     * @returnan an in-put from the player.
+     */
+    public static int isNextIntValid() {
+        while (true) {
+            try {
+                return input.nextInt();
+            } catch (Exception e) {
+                System.out.println("Try to write a number pls");
+                input.nextLine();
+                continue;
+            }
+        }
     }
 
     /**
